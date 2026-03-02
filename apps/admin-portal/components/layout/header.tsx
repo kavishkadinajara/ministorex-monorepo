@@ -1,6 +1,7 @@
 "use client";
 
 import { useAuth } from "@/components/providers/auth-provider";
+import { createClient } from "@ministorex/database/client";
 import { Avatar, AvatarFallback, AvatarImage } from "@ministorex/ui/components/avatar";
 import { Button } from "@ministorex/ui/components/button";
 import {
@@ -13,7 +14,6 @@ import {
 } from "@ministorex/ui/components/dropdown-menu";
 import { Input } from "@ministorex/ui/components/input";
 import { Skeleton } from "@ministorex/ui/components/skeleton";
-import { createClient } from "@ministorex/database/client";
 import {
     Bell,
     ChevronDown,

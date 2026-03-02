@@ -1,12 +1,12 @@
 "use client";
 
+import { deleteStore, getStoreById } from "@ministorex/database/api-stores";
+import type { Store } from "@ministorex/database/types";
 import { Badge } from "@ministorex/ui/components/badge";
 import { Button } from "@ministorex/ui/components/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ministorex/ui/components/card";
 import { Separator } from "@ministorex/ui/components/separator";
 import { Skeleton } from "@ministorex/ui/components/skeleton";
-import { deleteStore, getStoreById } from "@ministorex/database/api-stores";
-import type { Store } from "@ministorex/database/types";
 import {
     ArrowLeft,
     Building2,

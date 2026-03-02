@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { Button } from "@ministorex/ui/components/button";
 import { createClient } from "@ministorex/database/server";
+import { Button } from "@ministorex/ui/components/button";
+import Link from "next/link";
 import { LogoutButton } from "./logout-button";
 
 export async function AuthButton() {

@@ -5,22 +5,22 @@ import { ScrollArea } from "@ministorex/ui/components/scroll-area";
 import { cn } from "@ministorex/ui/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  BarChart3,
-  Building2,
-  ChevronDown,
-  CreditCard,
-  LayoutDashboard,
-  MapPin,
-  Package,
-  Settings,
-  Shield,
-  ShoppingCart,
-  Store,
-  UserCog,
-  Users,
-  X,
-  Zap,
-  type LucideIcon,
+    BarChart3,
+    Building2,
+    ChevronDown,
+    CreditCard,
+    LayoutDashboard,
+    MapPin,
+    Package,
+    Settings,
+    Shield,
+    ShoppingCart,
+    Store,
+    UserCog,
+    Users,
+    X,
+    Zap,
+    type LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

@@ -82,26 +82,26 @@ MiniStoreX is a **cloud-based, multi-tenant retail management system** designed 
 
 ```mermaid
 graph TB
-    subgraph "Client Applications"
-        A[🖥️ Admin Portal<br/>:3001]
-        B[🏪 Store Web<br/>:3002]
-        C[👤 Customer Web<br/>:3003]
-        D[🚚 Supplier Portal<br/>:3004]
+    subgraph CA["Client Applications"]
+        A["Admin Portal\n:3001"]
+        B["Store Web\n:3002"]
+        C["Customer Web\n:3003"]
+        D["Supplier Portal\n:3004"]
     end
 
-    subgraph "Shared Packages"
-        UI[@ministorex/ui<br/>Component Library]
-        DB[@ministorex/database<br/>Supabase SDK]
-        CFG[@ministorex/config<br/>Tailwind + TS]
-        UTL[@ministorex/utils<br/>Helpers]
+    subgraph SP["Shared Packages"]
+        UI["ministorex/ui\nComponent Library"]
+        DB["ministorex/database\nSupabase SDK"]
+        CFG["ministorex/config\nTailwind + TS"]
+        UTL["ministorex/utils\nHelpers"]
     end
 
-    subgraph "Backend — Supabase"
-        AUTH[Auth<br/>JWT + Sessions]
-        PG[(PostgreSQL<br/>Database)]
-        RLS[Row Level<br/>Security]
-        RPC[Database<br/>Functions / RPC]
-        RT[Realtime<br/>Subscriptions]
+    subgraph BE["Backend - Supabase"]
+        AUTH["Auth\nJWT + Sessions"]
+        PG[("PostgreSQL\nDatabase")]
+        RLS["Row Level\nSecurity"]
+        RPC["Database\nFunctions / RPC"]
+        RT["Realtime\nSubscriptions"]
     end
 
     A --> UI
@@ -135,28 +135,28 @@ graph TB
 
 ## 📱 Applications
 
-### 🖥️ Admin Portal (`apps/admin-portal`) — Port 3001
+### 🖥️ Admin Portal (`apps/admin-portal`) - Port 3001
 
 The nerve centre of MiniStoreX. Full system administration with multi-store visibility.
 
 **Key screens:**
-- **Dashboard** — KPIs and summary metrics across all stores
-- **Store Operations** — POS, sales history
-- **Inventory** — Products, stock in/out, adjustments
-- **Customers** — Customer profiles and ledger
-- **Credit / Naya** — Credit sales management and payment tracking
-- **Reports** — Daily, sales, stock, credit reports
-- **Administration** — Stores, locations, users, roles & permissions, settings
+- **Dashboard** - KPIs and summary metrics across all stores
+- **Store Operations** - POS, sales history
+- **Inventory** - Products, stock in/out, adjustments
+- **Customers** - Customer profiles and ledger
+- **Credit / Naya** - Credit sales management and payment tracking
+- **Reports** - Daily, sales, stock, credit reports
+- **Administration** - Stores, locations, users, roles & permissions, settings
 
-### 🏪 Store Web (`apps/store-web`) — Port 3002
+### 🏪 Store Web (`apps/store-web`) - Port 3002
 
-Lightweight storefront interface for in-store operations — optimised for cashier and floor staff workflows.
+Lightweight storefront interface for in-store operations - optimised for cashier and floor staff workflows.
 
-### 👤 Customer Web (`apps/customer-web`) — Port 3003
+### 👤 Customer Web (`apps/customer-web`) - Port 3003
 
 Customer-facing portal for viewing purchase history, outstanding credit balances, and account details.
 
-### 🚚 Supplier Portal (`apps/supplier-portal`) — Port 3004
+### 🚚 Supplier Portal (`apps/supplier-portal`) - Port 3004
 
 Supplier-facing portal for invoice submission, order tracking, and pricing management.
 
@@ -452,8 +452,8 @@ ministorex-monorepo/
 ### Prerequisites
 
 - **Node.js** 18+
-- **pnpm** 9.15+ — `npm install -g pnpm@9.15`
-- A **Supabase** project — [supabase.com](https://supabase.com)
+- **pnpm** 9.15+ - `npm install -g pnpm@9.15`
+- A **Supabase** project - [supabase.com](https://supabase.com)
 
 ### 1. Clone & Install
 
@@ -482,7 +482,7 @@ Run the migrations in order against your Supabase project via the Supabase SQL e
 Each app needs its own `.env.local`. Copy the template into each app directory:
 
 ```bash
-# Example — repeat for each app
+# Example - repeat for each app
 cp .env.local apps/admin-portal/.env.local
 cp .env.local apps/store-web/.env.local
 cp .env.local apps/customer-web/.env.local
@@ -529,9 +529,9 @@ Turborepo will build packages in topological dependency order and cache results 
 |---|:---:|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | ✅ | Your Supabase project URL |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | ✅ | Your Supabase anon/public key |
-| `VERCEL_URL` | ❌ | Auto-set on Vercel — used for metadata base URL |
+| `VERCEL_URL` | ❌ | Auto-set on Vercel - used for metadata base URL |
 
-> ⚠️ **Important:** Next.js only reads `.env.local` from each app's own directory. The root `.env.local` is for reference only — each `apps/*` folder must have its own copy.
+> ⚠️ **Important:** Next.js only reads `.env.local` from each app's own directory. The root `.env.local` is for reference only - each `apps/*` folder must have its own copy.
 
 ---
 
@@ -580,7 +580,7 @@ sequenceDiagram
 
 ## 🗺️ Roadmap
 
-### ✅ Phase 1 — Foundation (Complete)
+### ✅ Phase 1 - Foundation (Complete)
 - [x] Monorepo setup with Turborepo + pnpm
 - [x] Shared UI component library
 - [x] Supabase database layer with TypeScript types
@@ -589,27 +589,27 @@ sequenceDiagram
 - [x] Store & location management API
 - [x] Role-based dashboard layout
 
-### 🚧 Phase 2 — Core Operations (In Progress)
+### 🚧 Phase 2 - Core Operations (In Progress)
 - [ ] POS (Point of Sale) interface
 - [ ] Product catalogue management
 - [ ] Stock in / out / adjustment flows
 - [ ] Customer management
 - [ ] Credit / Naya ledger
 
-### 🔜 Phase 3 — Reporting & Analytics
+### 🔜 Phase 3 - Reporting & Analytics
 - [ ] Daily sales summary
 - [ ] Sales trend reports
 - [ ] Stock level reports
 - [ ] Credit ageing reports
 - [ ] Export to PDF / Excel
 
-### 🔜 Phase 4 — Customer & Supplier Portals
+### 🔜 Phase 4 - Customer & Supplier Portals
 - [ ] Customer self-service portal
 - [ ] Credit balance & payment history
 - [ ] Supplier invoice submission
 - [ ] Purchase order management
 
-### 🔮 Phase 5 — Advanced Features
+### 🔮 Phase 5 - Advanced Features
 - [ ] Real-time dashboard (Supabase Realtime)
 - [ ] Mobile PWA support
 - [ ] Multi-currency support
@@ -643,7 +643,7 @@ This project is licensed under the **[PolyForm Noncommercial License 1.0.0](LICE
 | Non-profit & government use | Sublicensing to others |
 | Forking & modifying for personal use | Distributing without this license notice |
 
-> 💼 **Commercial licensing available** — contact **Kaviska Dinajara** to obtain a commercial license for use in commercial products or services.
+> 💼 **Commercial licensing available** - contact **Kaviska Dinajara** to obtain a commercial license for use in commercial products or services.
 
 See the full license text in the [LICENSE](LICENSE) file.
 

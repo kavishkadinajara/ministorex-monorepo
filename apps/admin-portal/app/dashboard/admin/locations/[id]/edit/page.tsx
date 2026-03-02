@@ -1,5 +1,7 @@
 "use client";
 
+import { getLocationById, getStores, updateLocation } from "@ministorex/database/api-stores";
+import type { Store } from "@ministorex/database/types";
 import { Alert, AlertDescription } from "@ministorex/ui/components/alert";
 import { Button } from "@ministorex/ui/components/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ministorex/ui/components/card";
@@ -7,8 +9,6 @@ import { Checkbox } from "@ministorex/ui/components/checkbox";
 import { Input } from "@ministorex/ui/components/input";
 import { Label } from "@ministorex/ui/components/label";
 import { Skeleton } from "@ministorex/ui/components/skeleton";
-import { getLocationById, getStores, updateLocation } from "@ministorex/database/api-stores";
-import type { Store } from "@ministorex/database/types";
 import { AlertCircle, ArrowLeft, CheckCircle2, Info, Loader2, MapPin, Save } from "lucide-react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";

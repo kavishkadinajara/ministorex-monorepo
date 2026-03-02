@@ -1,11 +1,11 @@
 "use client";
 
+import { deleteLocation, getLocationById } from "@ministorex/database/api-stores";
+import type { Location } from "@ministorex/database/types";
 import { Badge } from "@ministorex/ui/components/badge";
 import { Button } from "@ministorex/ui/components/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ministorex/ui/components/card";
 import { Skeleton } from "@ministorex/ui/components/skeleton";
-import { deleteLocation, getLocationById } from "@ministorex/database/api-stores";
-import type { Location } from "@ministorex/database/types";
 import {
     ArrowLeft,
     Building2,

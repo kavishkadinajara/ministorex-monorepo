@@ -1,12 +1,12 @@
 "use client";
 
+import { createLocation, getStores } from "@ministorex/database/api-stores";
+import type { Store } from "@ministorex/database/types";
 import { Button } from "@ministorex/ui/components/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@ministorex/ui/components/card";
 import { Input } from "@ministorex/ui/components/input";
 import { Label } from "@ministorex/ui/components/label";
 import { Skeleton } from "@ministorex/ui/components/skeleton";
-import { createLocation, getStores } from "@ministorex/database/api-stores";
-import type { Store } from "@ministorex/database/types";
 import { ArrowLeft, CheckCircle2, Info, Loader2, MapPin, Save } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

@@ -1,0 +1,17 @@
+{
+  "name": "@ministorex/config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./tailwind": "./tailwind.config.ts",
+    "./postcss": "./postcss.config.mjs",
+    "./globals.css": "./globals.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8",
+    "typescript": "^5"
+  }
+}

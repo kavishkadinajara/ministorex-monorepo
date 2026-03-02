@@ -1,0 +1,13 @@
+{
+  "name": "@ministorex/utils",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./format": "./src/format.ts",
+    "./constants": "./src/constants.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

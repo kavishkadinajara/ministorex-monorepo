@@ -1,0 +1,25 @@
+{
+  "name": "@ministorex/database",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts",
+    "./middleware": "./src/middleware.ts",
+    "./types": "./src/types/database.ts",
+    "./api/stores": "./src/api/stores.ts",
+    "./api-stores": "./src/api/stores.ts",
+    "./permissions": "./src/permissions.ts"
+  },
+  "devDependencies": {
+    "@ministorex/config": "workspace:*",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.47.12"
+  },
+  "peerDependencies": {
+    "next": ">=15.0.0"
+  }
+}
